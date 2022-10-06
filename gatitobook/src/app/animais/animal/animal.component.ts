@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-const API = 'http://localhost:3000';
+import { environment } from './../../../environments/environment';
+
+const API = environment.apiURL;
 
 @Component({
   selector: 'app-animal',
@@ -23,7 +25,7 @@ export class AnimalComponent implements OnInit {
   get url(): string {
     return this.urlOriginal;
   }
-  
+
   constructor() { }
 
   ngOnInit(): void {
